@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Iniciar sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="login-container">
+    <!-- Tarjeta blanca con el formulario -->
+    <div class="login-box">
+      <!-- Logo -->
+      <div class="logo-container">
+        <ion-icon name="person-circle-outline" class="logo"></ion-icon>
+      </div>
+      
+      <!-- Formulario login -->
+      <form class="login-form">
+        <ion-item lines="none" class="form-item">
+          <ion-input 
+            type="text" 
+            placeholder="Nombre de usuario"
+            class="custom-input">
+          </ion-input>
+        </ion-item>
+        
+        <ion-item lines="none" class="form-item">
+          <ion-input 
+            type="password" 
+            placeholder="Contraseña"
+            class="custom-input">
+          </ion-input>
+        </ion-item>
+        
+        <ion-button expand="block" class="login-button" fill="solid">
+          Iniciar sesión
+        </ion-button>
+        
+        <div class="divider">
+          <span>O</span>
+        </div>
+        
+        <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+      </form>
+    </div>
+    
+    <!-- Sección registro -->
+    <div class="signup-box">
+      ¿No tienes una cuenta? <a href="#" class="signup-link">Regístrate</a>
+    </div>
+  </div>
+</ion-content>
