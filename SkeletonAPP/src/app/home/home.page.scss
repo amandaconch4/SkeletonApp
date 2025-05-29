@@ -24,6 +24,7 @@
 
 #container a {
   text-decoration: none;
+  color: #f150c1;
 }
 
 .container {
@@ -35,7 +36,7 @@
 .welcome-message {
   text-align: center;
   margin-bottom: 30px;
-  color: var(--ion-color-primary);
+  color: #e653ba;
 }
 
 .user-form {
@@ -48,7 +49,7 @@
   }
 
   ion-label {
-    color: var(--ion-color-medium);
+    color: #e653ba;
     font-weight: 500;
   }
 
@@ -64,5 +65,8 @@
 
   ion-button {
     flex: 1;
+    --background: #e653ba;
+    --background-hover: #b62b8c;
+    --background-activated: #b62b8c;
   }
 }
