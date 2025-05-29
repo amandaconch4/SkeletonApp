@@ -40,6 +40,15 @@ ion-content {
     gap: 6px;
   }
   
+    .form-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #262626;
+    font-weight: 500;
+    text-align: left;
+  }
+
   .form-item {
     --background: #fafafa;
     --border-color: #dbdbdb;

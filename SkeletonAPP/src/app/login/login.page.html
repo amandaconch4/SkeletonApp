@@ -6,32 +6,33 @@
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <div class="login-container">
+
     <!-- Tarjeta blanca con el formulario -->
     <div class="login-box">
+      <!-- Título de la tarjeta -->
+      <h2 class="login-title">Skeleton APP</h2>
       <!-- Logo de persona -->
       <div class="logo-container">
         <ion-icon name="person-circle-outline" class="logo"></ion-icon>
       </div>
       
       <!-- Formulario login -->
-      <form class="login-form">
-        <ion-item lines="none" class="form-item">
-          <ion-input 
-            type="text" 
-            placeholder="Nombre de usuario"
-            class="custom-input">
-          </ion-input>
-        </ion-item>
+      <form class="login-form" (ngSubmit)="login()">
+        <div class="form-group">
+          <label class="form-label">Nombre de usuario</label>
+          <ion-item lines="none" class="form-item">
+            <ion-input type="text" [(ngModel)]="username" name="username" required></ion-input>
+          </ion-item>
+        </div>
         
-        <ion-item lines="none" class="form-item">
-          <ion-input 
-            type="password" 
-            placeholder="Contraseña"
-            class="custom-input">
-          </ion-input>
-        </ion-item>
+        <div class="form-group">
+          <label class="form-label">Contraseña</label>
+          <ion-item lines="none" class="form-item">
+            <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+          </ion-item>
+        </div>
         
-        <ion-button expand="block" class="login-button" fill="solid">
+        <ion-button type="submit" expand="block" class="login-button" fill="solid">
           Iniciar sesión
         </ion-button>
         
