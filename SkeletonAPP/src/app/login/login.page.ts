@@ -6,7 +6,7 @@ import { AlertController } from '@ionic/angular';
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
-  standalone: false
+  standalone: false,
 })
 
 export class LoginPage {
@@ -24,16 +24,13 @@ export class LoginPage {
       buttons: ['OK']
     });
     await alert.present();
-}
+  }
 
   // Método para validar formato de username
   validarUsername(username: string): boolean {
-    console.log('Validando username:', username);
     // Permite letras mayúsculas, minúsculas y números, entre 3 y 8 caracteres
     const regex = /^[a-zA-Z0-9]{3,8}$/;
-    const resultado = regex.test(username);
-    console.log('Resultado de la validación:', resultado);
-    return resultado;
+    return regex.test(username);
   }
 
   // Método para validar formato de password
@@ -74,5 +71,4 @@ export class LoginPage {
     // Si las validaciones pasan, redirige al usuario a la página de inicio
     this.router.navigate(['/home'], {state: { username: this.username }});
   }
-
 }
