@@ -56,6 +56,22 @@
   ion-input, ion-select, ion-datetime {
     --padding-start: 10px;
   }
+
+  ion-input.slide {
+    position: relative;
+    animation: slideRight 1s ease-out forwards;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }
 
 .button-container {

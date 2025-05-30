@@ -14,14 +14,14 @@
       <div class="form-group">
         <label class="form-label">Nombre</label>
         <ion-item lines="none" class="form-item">
-          <ion-input type="text" [(ngModel)]="nombre" name="nombre" required></ion-input>
+          <ion-input type="text" [(ngModel)]="nombre" name="nombre" required [class.slide]="isSliding" style="position: relative; width: 100%;"></ion-input>
         </ion-item>
       </div>
 
       <div class="form-group">
         <label class="form-label">Apellido</label>
         <ion-item lines="none" class="form-item">
-          <ion-input type="text" [(ngModel)]="apellido" name="apellido" required></ion-input>
+          <ion-input type="text" [(ngModel)]="apellido" name="apellido" required [class.slide]="isSliding" style="position: relative; width: 100%;"></ion-input>
         </ion-item>
       </div>
 

@@ -15,6 +15,7 @@ export class HomePage {
   apellido: string = '';
   nivelEducacional: string = '';
   fechaNacimiento: string = '';
+  isSliding: boolean = false;
 
   constructor(
     private router: Router,
@@ -28,10 +29,17 @@ export class HomePage {
   }
 
   limpiarFormulario() {
-    this.nombre = '';
-    this.apellido = '';
-    this.nivelEducacional = '';
-    this.fechaNacimiento = '';
+    // Primero se activa la animación
+    this.isSliding = true;
+    
+    // Cuando termine la animación, se limpian los campos
+    setTimeout(() => {
+      this.nombre = '';
+      this.apellido = '';
+      this.nivelEducacional = '';
+      this.fechaNacimiento = '';
+      this.isSliding = false;
+    }, 1000);
   }
 
   async mostrarDatos() {
