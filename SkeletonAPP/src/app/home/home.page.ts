@@ -43,13 +43,19 @@ export class HomePage {
   }
 
   async mostrarDatos() {
+    // Formatea la fecha al formato dd-mm-yyyy
+    const fechaFormateada = this.fechaNacimiento ? new Date(this.fechaNacimiento).toLocaleDateString('es-ES', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    }).replace(/\//g, '-') : '';
+
     const alert = await this.alertController.create({
       header: 'Datos del Usuario',
       message: `
-        <p><strong>Nombre:</strong> ${this.nombre}</p>
-        <p><strong>Apellido:</strong> ${this.apellido}</p>
-        <p><strong>Nivel Educacional:</strong> ${this.nivelEducacional}</p>
-        <p><strong>Fecha de Nacimiento:</strong> ${this.fechaNacimiento}</p>
+        Nombre completo: ${this.nombre} ${this.apellido}
+        Nivel Educacional: ${this.nivelEducacional}
+        Fecha de Nacimiento: ${fechaFormateada}
       `,
       buttons: ['OK']
     });

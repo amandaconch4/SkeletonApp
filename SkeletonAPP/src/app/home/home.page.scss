@@ -103,3 +103,20 @@
     --background-activated: #b62b8c;
   }
 }
+
+::ng-deep .alert-message {
+  .alert-wrapper {
+    .alert-message {
+      display: flex;
+      flex-direction: column;
+      
+      p {
+        margin: 5px 0 !important;
+        padding: 0 !important;
+      }
+       > *:not(:last-child) {
+         margin-bottom: 10px !important;
+       }
+    }
+  }
+}

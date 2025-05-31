@@ -10,7 +10,7 @@
 
     <h4 class="section-title">Información adicional</h4>
 
-    <form class="user-form">
+    <form class="user-form" (ngSubmit)="mostrarDatos()">
       <div class="form-group">
         <label class="form-label">Nombre</label>
         <ion-item lines="none" class="form-item">
@@ -50,10 +50,10 @@
       </div>
 
       <div class="button-container">
-        <ion-button expand="block" (click)="limpiarFormulario()" color="medium">
+        <ion-button expand="block" (click)="limpiarFormulario()" color="medium" type="button">
           Limpiar
         </ion-button>
-        <ion-button expand="block" (click)="mostrarDatos()">
+        <ion-button expand="block" type="submit">
           Mostrar
         </ion-button>
       </div>
