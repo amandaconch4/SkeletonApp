@@ -33,10 +33,23 @@
   padding: 20px;
 }
 
+// Animación para el mensaje de bienvenida
 .welcome-message {
   text-align: center;
   margin-bottom: 30px;
   color: #e653ba;
+  animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .user-form {
@@ -60,6 +73,10 @@
   ion-input.slide {
     position: relative;
     animation: slideRight 1s ease-out forwards;
+  }
+
+  .datepicker-field {
+    width: 100%;
   }
 }
 
