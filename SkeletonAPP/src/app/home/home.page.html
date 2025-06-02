@@ -4,12 +4,14 @@
   </ion-toolbar>
 </ion-header>
 
+<!-- Mensaje de bienvenida -->
 <ion-content [fullscreen]="true" class="ion-padding">
   <div class="container">
     <h2 class="welcome-message">¡Bienvenid&#64; {{username}}!</h2>
 
     <h4 class="section-title">Información adicional</h4>
 
+    <!-- Formulario de información adicional -->
     <form class="user-form" (ngSubmit)="mostrarDatos()">
       <div class="form-group">
         <label class="form-label">Nombre</label>
@@ -49,6 +51,7 @@
         </ion-item>
       </div>
 
+      <!-- Botones limpiar y mostrar -->
       <div class="button-container">
         <ion-button expand="block" (click)="limpiarFormulario()" color="medium" type="button">
           Limpiar
